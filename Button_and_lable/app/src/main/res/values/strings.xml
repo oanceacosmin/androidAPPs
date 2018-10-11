@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Button_and_lable</string>
+    <string name="button_label">Send message</string>
+    <string name="edit_message">Enter message</string>
+    <string name="welcome_message">Welcome to Message Activity</string>
+</resources>
