@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    //insert data into database
      public void insertdata (String Fname, String Sname, String Password, String Email){
          ContentValues contentValues = new ContentValues();
          contentValues.put(DatabaseHelper.COL_2, Fname);
