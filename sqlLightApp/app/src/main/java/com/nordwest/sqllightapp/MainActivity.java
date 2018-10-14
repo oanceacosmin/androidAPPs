@@ -1,6 +1,7 @@
 package com.nordwest.sqllightapp;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     SQLiteOpenHelper openHelper;
     SQLiteDatabase db;
-    Button btn;
+    Button btn, _btnlogin;
     EditText _txtFname_, _txtSname_, _txtpass_, _txtEmail_;
 
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         _txtSname_ = findViewById(R.id.id_secondname);
         _txtpass_ = findViewById(R.id.id_password);
         _txtEmail_ = findViewById(R.id.id_email);
+        _btnlogin = findViewById(R.id.btnlogin);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
                 insertdata(Fname, Sname, Password, Email);
                 Toast.makeText(getApplicationContext(), "register Succesfully", Toast.LENGTH_LONG).show();
 
+            }
+        });
+        _btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (MainActivity.this, login.class);
+                startActivity(intent);
             }
         });
     }
