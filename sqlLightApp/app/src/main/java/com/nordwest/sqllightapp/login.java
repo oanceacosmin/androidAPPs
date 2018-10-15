@@ -33,7 +33,7 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
                 String email = _txtEmail.getText().toString();
                 String pass = _txtPass.getText().toString();
-                //cursor = db.rawQuery("SELECT * FROM" +DatabaseHelper.TAABLE_NAME +"WHERE" + DatabaseHelper.COL_5 + "=? AND" + DatabaseHelper.COL_4+ "=?", new String[]{email, pass});
+                cursor = db.rawQuery("SELECT * FROM" +DatabaseHelper.TAABLE_NAME +"WHERE" + DatabaseHelper.COL_5 + "=? AND" + DatabaseHelper.COL_4+ "=?", new String[]{email, pass});
                 if(cursor !=null ){
                     if (cursor.getCount()>0){
                         Toast.makeText(getApplicationContext(), "Login successfully", Toast.LENGTH_LONG).show();
