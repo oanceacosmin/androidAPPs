@@ -1,5 +1,6 @@
  package com.nordwest.university_app;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,10 +17,11 @@ import android.widget.Toast;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         _btn_register = findViewById(R.id.btn_registration);
         _btn_login = findViewById(R.id.btn_login);
 
-
+        //actions onclick of LOGIN button
         _btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,10 +29,12 @@ import android.widget.Toast;
             }
         });
 
+        //open new activity on registration button clock
         _btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_register);
+                Intent intent = new Intent(MainActivity.this, register.class);
+                startActivity(intent);
             }
         });
     }
