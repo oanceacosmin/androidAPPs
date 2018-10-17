@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 String Password = _txtpass_.getText().toString();
                 String Email = _txtEmail_.getText().toString();
                 insertdata(Fname, Sname, Password, Email);
+                _txtFname_.getText().clear();
                 Toast.makeText(getApplicationContext(), "register Succesfully", Toast.LENGTH_LONG).show();
 
             }

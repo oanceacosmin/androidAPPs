@@ -16,7 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_3 = "stud_Sname";
     public static final String COL_4 = "stud_Email";
     public static final String COL_5 = "stud_Adress";
-    public static final String COL_6 = "stud_Pword";
+    public static final String COL_6 = "stud_PssWord";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -26,7 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " +TABLE_NAME+ "(Student_ID INTEGER PRIMARY KEY AUTOINCREMENT, FirstName TEXT, LastName TEXT, Email TEXT, Address TEXT, Password TEXT)");
     }
-    //Drop table is exists before creation
+    //Drop table if exists before creation
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " +TABLE_NAME);
