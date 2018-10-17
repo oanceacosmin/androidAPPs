@@ -24,24 +24,23 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         openHelper = new DatabaseHelper(this);
         db = openHelper.getReadableDatabase();
-        _btnLogin = findViewById(R.id.btnlogin);
+        _btnLogin = findViewById(R.id.btnLogin);
         _txtEmail = findViewById(R.id.txtEmail);
         _txtPass = findViewById(R.id.txtPass);
-
         _btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = _txtEmail.getText().toString();
                 String pass = _txtPass.getText().toString();
-                //cursor = db.rawQuery("SELECT * FROM" +DatabaseHelper.TAABLE_NAME +"WHERE" + DatabaseHelper.COL_5 + "=? AND" + DatabaseHelper.COL_4+ "=?", new String[]{email, pass});
-                if(cursor !=null ){
-                    if (cursor.getCount()>0){
+                cursor = db.rawQuery("SELECT * FROM " +DatabaseHelper.TAABLE_NAME+ " WHERE " +DatabaseHelper.COL_5 +" =? AND " + DatabaseHelper.COL_4 + " =? ", new String[]{email, pass});
+                if (cursor != null){
+                    if (cursor.getCount() > 0){
                         Toast.makeText(getApplicationContext(), "Login successfully", Toast.LENGTH_LONG).show();
                     }else {
-                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"error", Toast.LENGTH_LONG).show();
                     }
                 }
             }
         });
-    }
+         }
 }

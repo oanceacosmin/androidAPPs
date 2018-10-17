@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">NavigationBetweenTheActivities</string>
-    <string name="app_buttons">Navigate To Activity</string>
-    <string name="message_place">Enter a Message</string>
-    <string name="view_message">Get the Message</string>
-</resources>
