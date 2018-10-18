@@ -59,6 +59,6 @@ public class MainActivity extends AppCompatActivity {
          contentValues.put(DatabaseHelper.COL_3, Sname);
          contentValues.put(DatabaseHelper.COL_4, Password);
          contentValues.put(DatabaseHelper.COL_5, Email);
-         long id = db.insert(DatabaseHelper.TAABLE_NAME, null, contentValues);
+         db.insert(DatabaseHelper.TAABLE_NAME, null, contentValues);
      }
 }
