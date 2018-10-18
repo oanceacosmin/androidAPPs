@@ -1,9 +1,12 @@
 package com.nordwest.university_app;
 
+import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,11 +43,25 @@ public class register extends AppCompatActivity {
                 String Address = _txtAddress_.getText().toString();
                 String Password = _txtPass_.getText().toString();
 
-                DatabaseHelper.addStudent(Fname, Sname, Password, Email, Address,db);
-                //_txtFname_.getText().clear();
+                ContentValues contentValues = new ContentValues();
+                contentValues.put(Contract.StudentEntry.STUDENT_FNAME,Fname);
+                contentValues.put(Contract.StudentEntry.STUDENT_SNAME,Sname);
+                contentValues.put(Contract.StudentEntry.STUDENT_EMAIL,Email);
+                contentValues.put(Contract.StudentEntry.STUDENT_ADDRESS,Address);
+                contentValues.put(Contract.StudentEntry.STUDENT_PASWD,Password);
+                db.insert(Contract.StudentEntry.TABLE_NAME, null, contentValues);
+                db.close();
+                Intent intent = new Intent(register.this,MainActivity.class);
+                startActivity(intent);
+
+                 Log.d("Database Operations","New record inserted in table "+ Contract.StudentEntry.TABLE_NAME);
                 Toast.makeText(getApplicationContext(), "register Succesfully", Toast.LENGTH_LONG).show();
             }
+
+
         });
+
+
 
 
     }
