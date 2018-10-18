@@ -88,5 +88,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //        //A log message in order to debug easier
 //        Log.d("Database Operations","New record inserted in table "+ Contract.StudentEntry.TABLE_NAME);
 //    }
+    public Cursor getInforation(DatabaseHelper db){
+        SQLiteDatabase SQ = db.getReadableDatabase();
+        String[] collection = {Contract.StudentEntry.STUDENT_EMAIL, Contract.StudentEntry.STUDENT_PASWD};
+        Cursor cursor = SQ.query(Contract.StudentEntry.TABLE_NAME,collection,null,null,null,null,null);
+        return cursor;
+    }
 
 }

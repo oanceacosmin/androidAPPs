@@ -51,7 +51,7 @@ public class register extends AppCompatActivity {
                 contentValues.put(Contract.StudentEntry.STUDENT_PASWD,Password);
                 db.insert(Contract.StudentEntry.TABLE_NAME, null, contentValues);
                 db.close();
-                Intent intent = new Intent(register.this,MainActivity.class);
+                Intent intent = new Intent(register.this,Login.class);
                 startActivity(intent);
 
                  Log.d("Database Operations","New record inserted in table "+ Contract.StudentEntry.TABLE_NAME);
