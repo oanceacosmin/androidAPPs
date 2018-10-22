@@ -16,7 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".register"></activity>
+        <activity android:name=".register" />
+        <activity android:name=".Login" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Wifi" />
+        <activity android:name=".Timetable" />
+        <activity android:name=".WebDashboard" />
+        <activity android:name=".FloorPlan" />
+        <activity android:name=".Library" />
+        <activity android:name=".Profile"></activity>
     </application>
 
 </manifest>
