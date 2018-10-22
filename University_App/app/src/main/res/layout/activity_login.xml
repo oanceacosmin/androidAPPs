@@ -49,12 +49,12 @@
             <!--android:background="@drawable/buttonstylepink"-->
             <!--android:textColor="#fff"/>-->
             <Button
-                android:id="@+id/btn_registration"
+                android:id="@+id/btn_re"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/buttonstyle2"
-                android:text="Register"
+                android:text="Contact US"
                 android:textColor="#fff" />
         </LinearLayout>
     </LinearLayout>
@@ -65,7 +65,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-      <!--  <EditText
+        <EditText
             android:id="@+id/login_email"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
@@ -82,10 +82,10 @@
             android:drawablePadding="10dp"
             android:fontFamily="monospace"
             android:hint="PASSWORD"
-            android:inputType="textPassword" />-->
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_log_in"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
