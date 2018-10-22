@@ -1,5 +1,6 @@
-package com.nordwest.sqllightapp;
+package com.nordwest.university_app;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -10,12 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     SQLiteDatabase db;
     SQLiteOpenHelper openHelper;
-    Button _btnLogin;
-    EditText _txtEmail, _txtPass;
+    Button btn_log_in;
+    EditText user_email, user_pass;
     Cursor cursor;
 
     @Override
@@ -24,25 +25,29 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         openHelper = new DatabaseHelper(this);
         db = openHelper.getReadableDatabase();
-        _btnLogin = findViewById(R.id.btnLogin);
-        _txtEmail = findViewById(R.id.txtEmail);
-        _txtPass = findViewById(R.id.txtPass);
+        btn_log_in = findViewById(R.id.btn_log_in);
+        user_email = findViewById(R.id.login_email);
+        user_pass = findViewById(R.id.pass_login);
 
-
-        _btnLogin.setOnClickListener(new View.OnClickListener() {
+        btn_log_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = _txtEmail.getText().toString();
-                String pass = _txtPass.getText().toString();
-                cursor = db.rawQuery("SELECT * FROM " +DatabaseHelper.TAABLE_NAME+ " WHERE " +DatabaseHelper.COL_5 +" =? AND " + DatabaseHelper.COL_4 + " =? ", new String[]{email, pass});
+                String email = user_email.getText().toString();
+                String pass = user_pass.getText().toString();
+                cursor = db.rawQuery("SELECT * FROM " +Contract.StudentEntry.TABLE_NAME+ " WHERE " +Contract.StudentEntry.STUDENT_EMAIL +" =? AND " + Contract.StudentEntry.STUDENT_PASWD + " =? ", new String[]{email, pass});
                 if (cursor != null){
                     if (cursor.getCount() > 0){
                         Toast.makeText(getApplicationContext(), "Login successfully", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(Login.this, Dashboard.class);
+                        startActivity(intent);
                     }else {
                         Toast.makeText(getApplicationContext(),"error", Toast.LENGTH_LONG).show();
                     }
                 }
             }
         });
-         }
+
+
+    }
+
 }
