@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //The SQL query for table creation
     public static final String CREATE_TABLE = "CREATE TABLE " + Contract.StudentEntry.TABLE_NAME +
-            "(" + Contract.StudentEntry.STUDENT_ID + " INTEGER AUTOINCREMENT,"+Contract.StudentEntry.STUDENT_FNAME+ " TEXT,"+ Contract.StudentEntry.STUDENT_SNAME + " TEXT,"+ Contract.StudentEntry.STUDENT_EMAIL +" TEXT,"+ Contract.StudentEntry.STUDENT_ADDRESS + " TEXT,"+Contract.StudentEntry.STUDENT_PASWD +" TEXT);";
+            "(" + Contract.StudentEntry.STUDENT_ID + " NUMBER,"+Contract.StudentEntry.STUDENT_FNAME+ " TEXT,"+ Contract.StudentEntry.STUDENT_SNAME + " TEXT,"+ Contract.StudentEntry.STUDENT_EMAIL +" TEXT,"+ Contract.StudentEntry.STUDENT_ADDRESS + " TEXT,"+Contract.StudentEntry.STUDENT_PASWD +" TEXT);";
 
 
     //The SQL query if table exists before creation
