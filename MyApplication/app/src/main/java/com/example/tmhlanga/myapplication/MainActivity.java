@@ -1,28 +1,30 @@
-package com.nordwest.myapplication;
+package com.example.tmhlanga.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_click;
 
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_click = findViewById(R.id.btn_click);
-        btn_click.setOnClickListener(new View.OnClickListener() {
+        UniSQL uni = new UniSQL(this);
+        btn = findViewById(R.id.btn_nav);
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, getString(R.string.btn_reg_clicked), Toast.LENGTH_LONG).show();
+                nav();
             }
         });
-
     }
-
-
-
+    private void nav()
+    {
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+    }
 }
