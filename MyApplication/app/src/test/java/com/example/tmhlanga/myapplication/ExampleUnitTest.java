@@ -1,4 +1,4 @@
-package com.nordwest.myapplication;
+package com.example.tmhlanga.myapplication;
 
 import org.junit.Test;
 
