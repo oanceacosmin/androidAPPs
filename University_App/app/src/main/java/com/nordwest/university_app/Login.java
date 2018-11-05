@@ -34,10 +34,21 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String email = user_email.getText().toString();
                 String pass = user_pass.getText().toString();
-                cursor = db.rawQuery("SELECT * FROM " +Contract.StudentEntry.TABLE_NAME+ " WHERE " +Contract.StudentEntry.STUDENT_EMAIL +" =? AND " + Contract.StudentEntry.STUDENT_PASWD + " =? ", new String[]{email, pass});
+
+
+                cursor = db.rawQuery("SELECT * FROM " +Contract.StudentEntry.TABLE_NAME+ " WHERE " +Contract.StudentEntry.STUDENT_EMAIL +" =? AND " + Contract.StudentEntry.STUDENT_PASWD + " =? ", new String[]{email, pass, });
                 if (cursor != null){
-                    if (cursor.getCount() > 0){
-                        Toast.makeText(getApplicationContext(), "Login successfully", Toast.LENGTH_LONG).show();
+                    if (cursor.moveToFirst()){
+                        do{
+                            Contract.StudentEntry.actualUserFirstName = cursor.getString(cursor.getColumnIndex(Contract.StudentEntry.STUDENT_FNAME));
+                            Contract.StudentEntry.actualUserSecondName= cursor.getString(cursor.getColumnIndex(Contract.StudentEntry.STUDENT_SNAME));
+                            Contract.StudentEntry.actualUserStudentID= cursor.getString(cursor.getColumnIndex(Contract.StudentEntry.STUDENT_ID));
+                            Contract.StudentEntry.actualUserEmail= cursor.getString(cursor.getColumnIndex(Contract.StudentEntry.STUDENT_EMAIL));
+                            Contract.StudentEntry.actualUserGroupName= cursor.getString(cursor.getColumnIndex(Contract.StudentEntry.STUDENT_GROUP));
+
+                        }while (cursor.moveToNext());
+                        Toast.makeText(getApplicationContext(), "Welcome to the dashboard " + Contract.StudentEntry.actualUserFirstName +"!", Toast.LENGTH_LONG).show();
+
                         Intent intent = new Intent(Login.this, Dashboard.class);
                         startActivity(intent);
                     }else {

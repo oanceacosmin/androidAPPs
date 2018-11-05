@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 public class WebDashboard extends AppCompatActivity {
 
-    WebView mWebView;
+    private WebView mWebView;
 
     /*WebView will open and load provided lick OnCreate method.
      Meaning the web dashboard will be launched at the same tie when the activity is called.*/
