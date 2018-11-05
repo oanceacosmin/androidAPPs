@@ -18,7 +18,7 @@ public class register extends AppCompatActivity {
     SQLiteOpenHelper openHelper;
     SQLiteDatabase db;
     Button _btn_register;
-    EditText _txtStudID_,_txtFname_, _txtSname_, _txtGroup_, _txtPass_, _txtEmail_;
+    EditText _txtFname_, _txtSname_, _txtGroup_, _txtPass_, _txtEmail_;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,6 @@ public class register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         openHelper = new DatabaseHelper(this);
         _btn_register = findViewById(R.id.btn_reg_regAct);
-        _txtStudID_ = findViewById(R.id.reg_Stud_id);
         _txtFname_ = findViewById(R.id.reg_Fname);
         _txtSname_ = findViewById(R.id.reg_Sname);
         _txtEmail_ = findViewById(R.id.reg_Email);
@@ -38,7 +37,6 @@ public class register extends AppCompatActivity {
             public void onClick(View v) {
 
                 db = openHelper.getWritableDatabase();
-                String studID = _txtStudID_.getText().toString();
                 String fName = _txtFname_.getText().toString();
                 String sName = _txtSname_.getText().toString();
                 String email = _txtEmail_.getText().toString();
@@ -46,7 +44,6 @@ public class register extends AppCompatActivity {
                 String password = _txtPass_.getText().toString();
 
                 ContentValues contentValues = new ContentValues();
-                contentValues.put(Contract.StudentEntry.STUDENT_ID,studID);
                 contentValues.put(Contract.StudentEntry.STUDENT_FNAME,fName);
                 contentValues.put(Contract.StudentEntry.STUDENT_SNAME,sName);
                 contentValues.put(Contract.StudentEntry.STUDENT_EMAIL,email);

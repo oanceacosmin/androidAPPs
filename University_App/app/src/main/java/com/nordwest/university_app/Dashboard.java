@@ -1,15 +1,21 @@
 package com.nordwest.university_app;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
 
     private CardView wifi, dashboard, floorPlan, library, timetable, profile;
+    private TextView userNameText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,13 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         library = findViewById(R.id.id_library);
         timetable = findViewById(R.id.id_timeTable);
         profile = findViewById(R.id.id_profile);
+
+        userNameText = findViewById(R.id.dashUserName);
+        userNameText.setText(Contract.StudentEntry.actualUserFirstName + " " + Contract.StudentEntry.actualUserSecondName);
+
+
+
+
         //Grating  message when successfully login
         Toast.makeText(getBaseContext(),"Welcome to the Dashboard",Toast.LENGTH_LONG).show();
 
@@ -32,6 +45,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         library.setOnClickListener(this);
         timetable.setOnClickListener(this);
         profile.setOnClickListener(this);
+
 
     }
 
