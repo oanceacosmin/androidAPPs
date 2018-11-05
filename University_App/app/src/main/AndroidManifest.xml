@@ -27,7 +27,6 @@
         <activity android:name=".FloorPlan" />
         <activity android:name=".Library" />
         <activity android:name=".Profile" />
-        <activity android:name=".StudentProfile"></activity>
     </application>
 
 </manifest>
