@@ -58,12 +58,10 @@ public class register extends AppCompatActivity {
                 startActivity(intent);
 
                  Log.d("Database Operations","New record inserted in table "+ Contract.StudentEntry.TABLE_NAME);
-                Toast.makeText(getApplicationContext(), "register Successfully", Toast.LENGTH_LONG).show();
                 Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_LONG).show();
             }
 
 
         });
     }
-
 }

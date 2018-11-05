@@ -17,7 +17,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     //The SQL query for table creation
-//<
     public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS "+Contract.StudentEntry.TABLE_NAME +
             " ( `_student_id_` INTEGER NOT NULL UNIQUE, " +
             "`_fn_` TEXT NOT NULL, " +

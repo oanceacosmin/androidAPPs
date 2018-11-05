@@ -8,12 +8,10 @@ import android.webkit.WebViewClient;
 
 public class WebDashboard extends AppCompatActivity {
 
-    private WebView mWebView;
+    WebView mWebView;
 
     /*WebView will open and load provided lick OnCreate method.
-     Meaning the web dashboard will be launched at the same tie when the activity is called.
-     As we have the WebView on the whole display the ContentView was set to display the WebView instead of any layouts
-     */
+     Meaning the web dashboard will be launched at the same tie when the activity is called.*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

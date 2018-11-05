@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">specialist1</string>
-    <string name="hello">Salut, Andrid!</string>
-    <string name="wrong_mess">OOPS, ceva a mers gresit</string>
-    <string name="enter_text">Introduceti numele dmv mai jos, va rog:</string>
-    <string name="Hello">Salut,</string>
-    <string name="enter_name">Introduceti numele dmv</string>
-</resources>
