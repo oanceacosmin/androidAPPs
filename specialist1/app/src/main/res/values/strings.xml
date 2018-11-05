@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">specialist1</string>
+    <string name="hello">Hello, Android World!</string>
+    <string name="wrong_mess">OOPS, something went wrong</string>
+    <string name="enter_text">Enter your name please:</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="Hello">Hello,</string>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="25dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_text" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label"
+        android:hint="@string/enter_name"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userName"
+        android:onClick="onClick"
+        android:layout_alignParentRight="true"
+        android:text="@android:string/ok"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/okButton"
+        android:layout_below="@id/userName"
+        android:text="@android:string/cancel"
+        android:layout_toStartOf="@id/okButton"/>
+
+
+</RelativeLayout>
