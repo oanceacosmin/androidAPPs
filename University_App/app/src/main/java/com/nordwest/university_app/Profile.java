@@ -19,7 +19,7 @@ public class Profile extends Activity {
         EmailProfile = findViewById(R.id.studentEmailProfile);
 
         profileName.setText(Contract.StudentEntry.actualUserFirstName + " " + Contract.StudentEntry.actualUserSecondName);
-        profileSt_ID.setText(Contract.StudentEntry.actualUserStudentID);
+        profileSt_ID.setText(Contract.StudentEntry.actualUserSecondName.substring(0,3).toUpperCase()+ "101" + Contract.StudentEntry.actualUserStudentID);
         groupProfile.setText(Contract.StudentEntry.actualUserGroupName);
         EmailProfile.setText(Contract.StudentEntry.actualUserEmail);
 
