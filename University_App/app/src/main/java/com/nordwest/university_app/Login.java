@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
-
+    /*creating some objects used later */
     SQLiteDatabase db;
     SQLiteOpenHelper openHelper;
     Button btn_log_in;
@@ -22,9 +22,11 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*when the activity is launched setContentView method will set the activity_login as interface on the whole display*/
         setContentView(R.layout.activity_login);
         openHelper = new DatabaseHelper(this);
         db = openHelper.getReadableDatabase();
+        /*Creates the link between layout widgets (elements) and activity objects  */
         btn_log_in = findViewById(R.id.btn_log_in);
         user_email = findViewById(R.id.login_email);
         user_pass = findViewById(R.id.pass_login);
