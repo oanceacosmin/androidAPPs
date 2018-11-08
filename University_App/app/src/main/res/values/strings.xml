@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">University_App</string>
     <string name="no_access">No access! Register please.</string>
+    <string name="user_email">USER EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="login">Login</string>
 </resources>
