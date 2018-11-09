@@ -49,7 +49,7 @@
             <!--android:background="@drawable/buttonstylepink"-->
             <!--android:textColor="#fff"/>-->
             <Button
-                android:id="@+id/btn_re"
+                android:id="@+id/btn_issue"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

@@ -25,9 +25,12 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             if (isEmailValid() && isPasswordValid()){
+
+
                 //let the user to enter the app if both methods return true
-               /* Intent launchDashboard = new Intent(LoginActivity.this, DashboardActivity.class);
-                startActivity(launchDashboard);*/
+                Intent launchDashboard = new Intent(LoginActivity.this, DashboardActivity.class);
+                startActivity(launchDashboard);
+
             }else {
                 showMessage(R.string.login_inputError);
             }

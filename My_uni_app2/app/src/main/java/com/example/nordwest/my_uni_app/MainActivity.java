@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
 
             //open login (authentication) activity and launch the corresponding layout
-            Intent launchDashboard = new Intent(MainActivity.this, AuthenticationActivity.class);
+            Intent launchDashboard = new Intent(MainActivity.this, AuthActivity.class);
             startActivity(launchDashboard);
 
         }
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
+            Intent launchDashboard = new Intent(MainActivity.this, RegistrationActivity.class);
+            startActivity(launchDashboard);
 
         }
     };
@@ -41,13 +43,7 @@ public class MainActivity extends AppCompatActivity {
         registerButton = findViewById(R.id.btn_registration);
 
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent launchLoginActivity = new Intent(MainActivity.this, AuthenticationActivity.class);
-                startActivity(launchLoginActivity);
-            }
-        });
+        loginButton.setOnClickListener(OnLoginButtonClickListener);
         registerButton.setOnClickListener(OnRegisterButtonClickListener);
 
     }
