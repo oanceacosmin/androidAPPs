@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".register">
+    android:orientation="vertical">
 
     <LinearLayout
 
@@ -21,11 +19,15 @@
             android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/modle_logo"
             android:fontFamily="monospace"
-            android:text="Welcome to Roehampton  University"
+            android:text="@string/welcome_to_roehampton_university"
             android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="20sp" />
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/show"
+            android:text="show"/>
         <!--<TextView-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
@@ -77,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center_vertical"
-                android:hint="First Name"/>
+                android:hint="@string/first_name"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -95,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center_vertical"
-                android:hint="Second Name"/>
+                android:hint="@string/second_name"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -113,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center_vertical"
-                android:hint="Email@example.com"/>
+                android:hint="@string/email_example_com"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -131,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center_vertical"
-                android:hint="Group"/>
+                android:hint="@string/group"/>
         </LinearLayout> <LinearLayout
             android:layout_marginTop="25dp"
             android:layout_width="match_parent"
@@ -149,7 +151,7 @@
                 android:paddingLeft="20dp"
                 android:layout_gravity="center_vertical"
                 android:inputType="textPassword"
-                android:hint="Password"/>
+                android:hint="@string/password"/>
         </LinearLayout>
         <Button
             android:id="@+id/btn_reg_regAct"
@@ -160,69 +162,9 @@
             android:background="@drawable/btn_register"
             android:drawableRight="@drawable/ic_send_black_24dp"
             android:fontFamily="monospace"
-            android:text="Register"
+            android:text="@string/register"
             android:textColor="#fff" />
     </LinearLayout>
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/reg_Stud_id"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
-            android:fontFamily="monospace"
-            android:hint="Student ID"
-            android:maxLength="20" />
-        <EditText
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
-            android:fontFamily="monospace"
-            android:hint="First name"
-            android:maxLength="20" />
-
-        <EditText
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
-            android:fontFamily="monospace"
-            android:hint="Second name"
-            android:maxLength="20" />
-
-
-        <EditText
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
-            android:fontFamily="monospace"
-            android:hint="Email address"
-            android:maxLength="35" />
-
-        <EditText
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
-            android:fontFamily="monospace"
-            android:hint="Student Group"
-            android:maxLength="40" />
-
-
-        <EditText
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
-            android:drawablePadding="10dp"
-            android:fontFamily="monospace"
-            android:hint="PASSWORD"
-            android:maxLength="20" />
-
-
-
-
-    </LinearLayout>-->
 
 </LinearLayout>

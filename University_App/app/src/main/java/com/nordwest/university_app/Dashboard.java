@@ -39,6 +39,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         Toast.makeText(getBaseContext(),"Welcome to the Dashboard",Toast.LENGTH_LONG).show();
 
         //adds click listeners to the cards
+
         wifi.setOnClickListener(this);
         dashboard.setOnClickListener(this);
         floorPlan.setOnClickListener(this);

@@ -21,4 +21,13 @@
     <string name="check_your_permissions">Check your permissions</string>
     <string name="user_default_image">user default image</string>
     <string name="welcome_to_roehampton_university">Welcome to Roehampton University</string>
+    <string name="settings_icon">settings icon</string>
+    <string name="email_icon">email icon</string>
+    <string name="second_name_icon">second name icon</string>
+    <string name="first_name_icon">first name icon</string>
+    <string name="first_name">First Name</string>
+    <string name="second_name">Second Name</string>
+    <string name="email_example_com">Email@example.com</string>
+    <string name="group">Group</string>
+    <string name="phone_number">+4474742154116</string>
 </resources>
