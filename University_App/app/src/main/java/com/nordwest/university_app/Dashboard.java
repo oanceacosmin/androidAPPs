@@ -21,6 +21,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        Toast.makeText(getApplicationContext(), "Welcome to the dashboard " + Contract.StudentEntry.actualUserFirstName +"!", Toast.LENGTH_LONG).show();
+
         //defining the cards
         wifi = findViewById(R.id.id_wifi);
         dashboard = findViewById(R.id.id_webDashboard);
